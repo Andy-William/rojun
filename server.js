@@ -47,7 +47,7 @@ io.on('connection', function(socket) {
 
   socket.on('join slot', function(data){
     if( current_slot != 0 ){
-      socket.emit('error', 'Cuma boleh join 1 slot')
+      socket.emit('invalid', 'Cuma boleh join 1 slot')
       return
     }
 
@@ -61,7 +61,7 @@ io.on('connection', function(socket) {
       });
     }
     else{
-      io.sockets.emit('error', 'Invalid slot')
+      io.sockets.emit('invalid', 'Invalid slot')
       console.log(name + ' trying to join invalid slot: ' + slot);
     }
     console.log(players)
