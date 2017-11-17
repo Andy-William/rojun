@@ -71,6 +71,9 @@
           this.showForm = false;
         },
       },
+      mounted() {
+        console.log(this.socket)
+      }
     });
 
   });
