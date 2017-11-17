@@ -1,0 +1,98 @@
+/*
+* Rojun Card Game
+*/
+/*
+= GLOBAL
+*/
+* {
+  vertical-align: middle; }
+
+.card {
+  width: 127.5px;
+  height: 190px;
+  background-size: contain;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  display: inline-block; }
+  .card--clubs--2 {
+    background-image: url("../images/clubs/2.png"); }
+  .card--clubs--3 {
+    background-image: url("../images/clubs/3.png"); }
+  .card--clubs--4 {
+    background-image: url("../images/clubs/4.png"); }
+  .card--clubs--5 {
+    background-image: url("../images/clubs/5.png"); }
+  .card--clubs--6 {
+    background-image: url("../images/clubs/6.png"); }
+  .card--clubs--7 {
+    background-image: url("../images/clubs/7.png"); }
+  .card--clubs--8 {
+    background-image: url("../images/clubs/8.png"); }
+  .card--clubs--9 {
+    background-image: url("../images/clubs/9.png"); }
+  .card--clubs--10 {
+    background-image: url("../images/clubs/10.png"); }
+  .card--clubs--j {
+    background-image: url("../images/clubs/j.png"); }
+  .card--clubs--q {
+    background-image: url("../images/clubs/q.png"); }
+  .card--clubs--k {
+    background-image: url("../images/clubs/k.png"); }
+  .card--clubs--a {
+    background-image: url("../images/clubs/a.png"); }
+  .card--diamonds--2 {
+    background-image: url("../images/diamonds/2.png"); }
+  .card--diamonds--3 {
+    background-image: url("../images/diamonds/3.png"); }
+  .card--diamonds--4 {
+    background-image: url("../images/diamonds/4.png"); }
+  .card--diamonds--5 {
+    background-image: url("../images/diamonds/5.png"); }
+  .card--diamonds--6 {
+    background-image: url("../images/diamonds/6.png"); }
+  .card--diamonds--7 {
+    background-image: url("../images/diamonds/7.png"); }
+  .card--diamonds--8 {
+    background-image: url("../images/diamonds/8.png"); }
+  .card--diamonds--9 {
+    background-image: url("../images/diamonds/9.png"); }
+  .card--diamonds--10 {
+    background-image: url("../images/diamonds/10.png"); }
+  .card--diamonds--j {
+    background-image: url("../images/diamonds/j.png"); }
+  .card--diamonds--q {
+    background-image: url("../images/diamonds/q.png"); }
+  .card--diamonds--k {
+    background-image: url("../images/diamonds/k.png"); }
+  .card--diamonds--a {
+    background-image: url("../images/diamonds/a.png"); }
+  .card--hearts--2 {
+    background-image: url("../images/hearts/2.png"); }
+  .card--hearts--3 {
+    background-image: url("../images/hearts/3.png"); }
+  .card--hearts--4 {
+    background-image: url("../images/hearts/4.png"); }
+  .card--hearts--5 {
+    background-image: url("../images/hearts/5.png"); }
+  .card--hearts--6 {
+    background-image: url("../images/hearts/6.png"); }
+  .card--hearts--7 {
+    background-image: url("../images/hearts/7.png"); }
+  .card--hearts--8 {
+    background-image: url("../images/hearts/8.png"); }
+  .card--hearts--9 {
+    background-image: url("../images/hearts/9.png"); }
+  .card--hearts--10 {
+    background-image: url("../images/hearts/10.png"); }
+  .card--hearts--j {
+    background-image: url("../images/hearts/j.png"); }
+  .card--hearts--q {
+    background-image: url("../images/hearts/q.png"); }
+  .card--hearts--k {
+    background-image: url("../images/hearts/k.png"); }
+  .card--hearts--a {
+    background-image: url("../images/hearts/a.png"); }
+  .card--back {
+    background-image: url("../images/back/pomegranate.png"); }
+
+/*# sourceMappingURL=style.css.map */

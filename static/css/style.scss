@@ -1,0 +1,36 @@
+/*
+* Rojun Card Game
+*/
+
+/*
+= GLOBAL
+*/
+* {
+  vertical-align: middle;
+}
+
+$types: (clubs, diamonds, hearts);
+$cards: (2, 3, 4, 5, 6, 7, 8, 9, 10, j, q, k, a);
+
+.card {
+  width: 127.5px;
+  height: 190px;
+  background-size: contain;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  display: inline-block;
+
+  @each $type in $types {
+    &--#{$type} {
+      @each $card in $cards {
+        &--#{$card} {
+          background-image: url('../images/#{$type}/#{$card}.png');
+        }
+      }
+    }
+  }
+
+  &--back {
+    background-image: url('../images/back/pomegranate.png');
+  }
+}
