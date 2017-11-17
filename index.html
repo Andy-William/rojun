@@ -15,7 +15,6 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -40,11 +39,24 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div id="vm__rojun">
-      <template v-for="type in types">
-        <template v-for="card in cards">
-          <div class="card" :class="['card--' + type + '--' + card]"></div>
-        </template>
-      </template>
+      <div class='wrapper'>
+        <div class='board'>
+          <div class="board__row">
+            <div class="player player--2"></div>
+          </div>
+          <div class="board__row">
+            <div class="board__col">
+              <div class="player player--1"></div>
+            </div>
+            <div class="board__col">
+              <div class="player player--3"></div>
+            </div>
+          </div>
+          <div class="board__row">
+            <div class="player player--4"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

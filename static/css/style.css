@@ -95,4 +95,35 @@
   .card--back {
     background-image: url("../images/back/pomegranate.png"); }
 
+.wrapper {
+  margin: 20px auto;
+  max-width: 640px; }
+
+.board {
+  width: 100%;
+  height: 570px;
+  background: #0f9d58;
+  border-radius: 5px;
+  border: 20px solid #0f9d58; }
+  .board__row {
+    width: 100%;
+    height: 190px; }
+  .board__col {
+    width: 50%;
+    float: left; }
+
+.player {
+  width: 127.5px;
+  height: 190px;
+  max-height: 100%;
+  background-image: url("../images/back/pomegranate.png");
+  background-size: contain; }
+
+.player--3 {
+  float: right; }
+
+.player--2,
+.player--4 {
+  margin: 0 auto; }
+
 /*# sourceMappingURL=style.css.map */
