@@ -1,7 +1,7 @@
-var socket = io();
-socket.on('message', function(data) {
-  console.log(data);
-});
+// var socket = io();
+// socket.on('message', function(data) {
+//   console.log(data);
+// });
 
 
 
@@ -57,30 +57,20 @@ socket.on('message', function(data) {
       data: {
         types: ['clubs', 'diamonds', 'hearts',],
         cards: ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'j', 'q', 'k', 'a',],
-        players: {
-          player1: {
-            name: 'Player 1',
-          },
-          player2: {
-            name: 'Player 2',
-          },
-          player3: {
-            name: 'Player 3',
-          },
-          player4: {
-            name: 'Player 4',
-          },
-        },
+        showForm: true,
+        name: '',
         flipCard: false,
       },
       methods: {
         toggleCard() {
           this.flipCard = !this.flipCard;
         },
+        join() {
+          var socket = io();
+          socket.emit('set name', this.name);
+          this.showForm = false;
+        },
       },
-      mounted() {
-        console.log('lelele')
-      }
     });
 
   });

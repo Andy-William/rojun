@@ -69,6 +69,17 @@
               <div class="card card--spades--a" v-else=""></div>
             </div>
           </div>
+          <div class="form" v-if="showForm">
+            <div class="form__overlay"></div>
+            <div class="form__inner">
+              <div class="form__input-wrapper">
+                <h1>ROJUN!!!!</h1>
+                <input class="form__input" type="text" placeholder="Masukkan nama" v-model="name">
+                <br/>
+                <button class="form__button" @click.prevent='join'>Join!</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <a href="#" @click.prevent="toggleCard">Test Flip</a>
