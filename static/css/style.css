@@ -146,7 +146,22 @@
   max-height: 100%;
   background-image: url("../images/back/pomegranate.png");
   background-size: contain;
-  cursor: pointer; }
+  cursor: pointer;
+  position: relative; }
+  .player__join {
+    position: absolute;
+    top: 80px;
+    width: 100%; }
+    .player__join-inner {
+      margin: 0 15px;
+      background: #fff;
+      border-radius: 5px;
+      padding: 5px 10px;
+      font-size: 10px;
+      font-weight: bold;
+      text-align: center; }
+    .is-joinned .player__join {
+      display: none; }
 
 .player__card {
   position: relative; }

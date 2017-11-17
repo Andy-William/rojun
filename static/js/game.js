@@ -71,8 +71,9 @@
           this.socket.emit('set name', this.name);
           this.showForm = false;
         },
-        joinSlot() {
-          this.socket.emit('join slot', 1);
+        joinSlot(slot) {
+          this.socket.emit('join slot', slot);
+          this.joinnedSlot = true;
         }
       },
       mounted() {
