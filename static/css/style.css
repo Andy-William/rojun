@@ -92,6 +92,32 @@
     background-image: url("../images/hearts/k.png"); }
   .card--hearts--a {
     background-image: url("../images/hearts/a.png"); }
+  .card--spades--2 {
+    background-image: url("../images/spades/2.png"); }
+  .card--spades--3 {
+    background-image: url("../images/spades/3.png"); }
+  .card--spades--4 {
+    background-image: url("../images/spades/4.png"); }
+  .card--spades--5 {
+    background-image: url("../images/spades/5.png"); }
+  .card--spades--6 {
+    background-image: url("../images/spades/6.png"); }
+  .card--spades--7 {
+    background-image: url("../images/spades/7.png"); }
+  .card--spades--8 {
+    background-image: url("../images/spades/8.png"); }
+  .card--spades--9 {
+    background-image: url("../images/spades/9.png"); }
+  .card--spades--10 {
+    background-image: url("../images/spades/10.png"); }
+  .card--spades--j {
+    background-image: url("../images/spades/j.png"); }
+  .card--spades--q {
+    background-image: url("../images/spades/q.png"); }
+  .card--spades--k {
+    background-image: url("../images/spades/k.png"); }
+  .card--spades--a {
+    background-image: url("../images/spades/a.png"); }
   .card--back {
     background-image: url("../images/back/pomegranate.png"); }
 
@@ -118,6 +144,13 @@
   max-height: 100%;
   background-image: url("../images/back/pomegranate.png");
   background-size: contain; }
+
+.player__card {
+  position: relative; }
+  .player__card .card {
+    position: absolute;
+    top: 0;
+    left: 0; }
 
 .player--3 {
   float: right; }

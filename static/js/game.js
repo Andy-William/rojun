@@ -70,10 +70,13 @@ socket.on('message', function(data) {
           player4: {
             name: 'Player 4',
           },
-        }
+        },
+        flipCard: false,
       },
       methods: {
-
+        toggleCard() {
+          this.flipCard = !this.flipCard;
+        },
       },
       mounted() {
         console.log('lelele')
