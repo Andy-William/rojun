@@ -35,17 +35,20 @@ io.on('connection', function(socket) {
   console.log(socket.id + ' joined')
 
   socket.on('set name', function(data){
-    current_user.name = String(data)
+    newName = String(data)
+    console.log(current_user.name + '(' + socket.id + ') changed name to ' + newName)
+    current_user.name = newName
   })
 
   socket.on('disconnect', function(){
     console.log(current_user.name + '(' + socket.id + ') disconnected.');
-    if( current_slot>0 ) io.sockets.emit('player disconnected', current_slot);
+    if( current_slot>0 ) io.sockets.emit('leave slot', current_slot);
     players[current_slot] = null;
     delete users[socket.id];
   })
 
   socket.on('join slot', function(data){
+    console.log(current_user.name + '(' + socket.id + ') trying to join slot ' + String(data));
     if( current_slot != 0 ){
       socket.emit('invalid', 'Cuma boleh join 1 slot')
       return
@@ -56,34 +59,30 @@ io.on('connection', function(socket) {
     if( slot > 0 && slot < 5 && players[slot] == null ){
       players[slot] = current_user;
       current_slot = slot;
-      console.log(name + ' joined slot ' + slot)
-      io.sockets.emit('join slot', {slot: current_slot, name: name
-      });
+      io.sockets.emit('join slot', {slot: current_slot, name: name, id: socket.id});
     }
     else{
-      io.sockets.emit('invalid', 'Invalid slot')
-      console.log(name + ' trying to join invalid slot: ' + slot);
+      io.sockets.emit('invalid', 'slot invalid')
     }
-    console.log(players)
+    console.log('players: ' + JSON.stringify(players))
   });
 
   socket.on('ready', function(){
+    console.log(current_user.name + '(' + socket.id + ') trying to ready slot ' + current_slot);
+    if( current_user.ready ) return;
     if( players[current_slot] == users[socket.id] ){
+      console.log(current_user.name + '(' + socket.id + ') ready (slot ' + current_slot + ')');
       current_user.ready = true;
       for( var i=1 ; i<=4 ; i++ ){
-        console.log(players[i]);
-        if( players[i]) console.log(users[players[i]].ready);
         if( players[i] && players[i].ready ) continue;
         else return;
       }
       console.log('semua siap');
       io.sockets.emit('start game');
-      io.sockets.emit('message', 'starto');
     }
     else{
-      socket.emit('message', 'join slot dulu woi');
+      socket.emit('invalid', 'join slot dulu woi');
     }
-
   })
 });
 
