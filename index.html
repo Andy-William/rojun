@@ -42,7 +42,7 @@
       <div class='wrapper'>
         <div class='board'>
           <div class="board__row">
-            <div class="player player--2">
+            <div class="player player--2" @click.prevent="joinSlot(2)">
               <div class="player__card">
                 <div class="card card--back" v-if="!flipCard"></div>
                 <div class="card card--clubs--a" v-else=""></div>
@@ -51,20 +51,20 @@
           </div>
           <div class="board__row">
             <div class="board__col">
-              <div class="player player--1">
+              <div class="player player--1" @click.prevent="joinSlot(1)">
                 <div class="card card--back" v-if="!flipCard"></div>
                 <div class="card card--hearts--a" v-else=""></div>
               </div>
             </div>
             <div class="board__col">
-              <div class="player player--3">
+              <div class="player player--3" @click.prevent="joinSlot(3)">
                 <div class="card card--back" v-if="!flipCard"></div>
                 <div class="card card--diamonds--a" v-else=""></div>
               </div>
             </div>
           </div>
           <div class="board__row">
-            <div class="player player--4">
+            <div class="player player--4" @click.prevent="joinSlot(4)">
               <div class="card card--back" v-if="!flipCard"></div>
               <div class="card card--spades--a" v-else=""></div>
             </div>

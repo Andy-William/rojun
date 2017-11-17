@@ -61,6 +61,7 @@
         showForm: true,
         name: '',
         flipCard: false,
+        joinnedSlot: false,
       },
       methods: {
         toggleCard() {
@@ -70,6 +71,9 @@
           this.socket.emit('set name', this.name);
           this.showForm = false;
         },
+        joinSlot() {
+          this.socket.emit('join slot', 1);
+        }
       },
       mounted() {
         console.log(this.socket)

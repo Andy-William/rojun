@@ -145,7 +145,8 @@
   height: 190px;
   max-height: 100%;
   background-image: url("../images/back/pomegranate.png");
-  background-size: contain; }
+  background-size: contain;
+  cursor: pointer; }
 
 .player__card {
   position: relative; }

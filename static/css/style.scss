@@ -70,6 +70,7 @@ $cards: (2, 3, 4, 5, 6, 7, 8, 9, 10, j, q, k, a);
   max-height: 100%;
   background-image: url('../images/back/pomegranate.png');
   background-size: contain;
+  cursor: pointer;
 }
 
 .player__card {
