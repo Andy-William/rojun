@@ -92,6 +92,22 @@ $cards: (2, 3, 4, 5, 6, 7, 8, 9, 10, j, q, k, a);
       display: none;
     }
   }
+
+  &__name {
+    background: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: absolute;
+    top: -23px;
+    font-weight: bold;
+    font-size: 10px;
+    border: 1px solid #333;
+    display: none;
+
+    .is-joinned & {
+      display: inline-block;
+    }
+  }
 }
 
 .player__card {

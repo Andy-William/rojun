@@ -49,6 +49,9 @@
                 <div class="player__join">
                   <div class="player__join-inner" @click.prevent="joinSlot(2)">Join Player 2</div>
                 </div>
+                <div class="player__name">
+                  {{ getPlayerName(2) }}
+                </div>
               </div>
             </div>
           </div>
@@ -60,6 +63,9 @@
                 <div class="player__join">
                   <div class="player__join-inner" @click.prevent="joinSlot(1)">Join Player 1</div>
                 </div>
+                <div class="player__name">
+                  {{ getPlayerName(1) }}
+                </div>
               </div>
             </div>
             <div class="board__col">
@@ -68,6 +74,9 @@
                 <div class="card card--diamonds--a" v-else=""></div>
                 <div class="player__join">
                   <div class="player__join-inner" @click.prevent="joinSlot(3)">Join Player 3</div>
+                </div>
+                <div class="player__name">
+                  {{ getPlayerName(3) }}
                 </div>
               </div>
             </div>
@@ -79,6 +88,9 @@
               <div class="player__join">
                 <div class="player__join-inner" @click.prevent="joinSlot(4)">Join Player 4</div>
               </div>
+              <div class="player__name">
+                  {{ getPlayerName(4) }}
+                </div>
             </div>
           </div>
           <div class="form" v-if="showForm">

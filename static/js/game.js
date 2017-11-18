@@ -62,6 +62,20 @@
         name: '',
         flipCard: false,
         joinnedSlot: false,
+        players: {
+          1: {
+            name: '',
+          },
+          2: {
+            name: '',
+          },
+          3: {
+            name: '',
+          },
+          4: {
+            name: '',
+          },
+        },
       },
       methods: {
         toggleCard() {
@@ -74,6 +88,19 @@
         joinSlot(slot) {
           this.socket.emit('join slot', slot);
           this.joinnedSlot = true;
+          this.addPlayer(slot);
+        },
+        addPlayer(slot) {
+          this.players[slot] = {
+            name: this.name,
+          }
+        },
+        getPlayerName(slot) {
+          if (this.players[slot].name) {
+            return this.players[slot].name;
+          } else {
+            return 'Menunggu pemain..';
+          }
         }
       },
       mounted() {
